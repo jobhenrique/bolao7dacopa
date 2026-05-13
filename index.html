@@ -618,7 +618,7 @@ select.form-input { cursor: pointer; }
 
 <!-- Config banner (shown until API_URL is set) -->
 <div id="config-banner">
-  ⚙️ <strong>Configuração necessária:</strong> substitua <code>SUA_URL_AQUI</code> pela URL do Apps Script.
+  ⚙️ <strong>Configuração necessária:</strong> substitua <code>https://script.google.com/macros/s/AKfycbzorsuI8mH5Ige1rngllNKgkx3YNScBOxUfxnea9blBu38xDFi5Ea2wkqYMHBgp-s6CFQ/exec</code> pela URL do Apps Script.
   Edite a linha <code>const API_URL = ...</code> no início do &lt;script&gt; deste arquivo.
 </div>
 
@@ -871,7 +871,7 @@ select.form-input { cursor: pointer; }
 // ═══════════════════════════════════════════════════════════════════════
 // CONFIGURAÇÃO — substitua pela sua URL do Apps Script
 // ═══════════════════════════════════════════════════════════════════════
-const API_URL = "SUA_URL_AQUI";
+const API_URL = "https://script.google.com/macros/s/AKfycbzorsuI8mH5Ige1rngllNKgkx3YNScBOxUfxnea9blBu38xDFi5Ea2wkqYMHBgp-s6CFQ/exec";
 
 // ═══════════════════════════════════════════════════════════════════════
 // DADOS DO TORNEIO (espelhados do Apps Script)
@@ -972,7 +972,7 @@ let appState = {
 // ═══════════════════════════════════════════════════════════════════════
 async function init() {
   // Check if API_URL is configured
-  if (API_URL === "SUA_URL_AQUI") {
+  if (API_URL === "https://script.google.com/macros/s/AKfycbzorsuI8mH5Ige1rngllNKgkx3YNScBOxUfxnea9blBu38xDFi5Ea2wkqYMHBgp-s6CFQ/exec") {
     document.getElementById("config-banner").classList.remove("hidden");
     setStatusPill("DEMO", false);
     appState.bolaoAberto = true;
@@ -1437,7 +1437,7 @@ async function submitAposta() {
   btn.innerHTML = '<span class="spinner"></span> Enviando...';
 
   try {
-    if (API_URL === "SUA_URL_AQUI") {
+    if (API_URL === "https://script.google.com/macros/s/AKfycbzorsuI8mH5Ige1rngllNKgkx3YNScBOxUfxnea9blBu38xDFi5Ea2wkqYMHBgp-s6CFQ/exec") {
       // Demo mode
       await new Promise(r => setTimeout(r, 1200));
       toast(`Aposta de "${appState.nomeConfirmado}" registrada! (modo demo)`, "success");
@@ -1480,7 +1480,7 @@ async function loadRanking() {
 
   try {
     let ranking;
-    if (API_URL === "SUA_URL_AQUI") {
+    if (API_URL === "https://script.google.com/macros/s/AKfycbzorsuI8mH5Ige1rngllNKgkx3YNScBOxUfxnea9blBu38xDFi5Ea2wkqYMHBgp-s6CFQ/exec") {
       // Demo data
       ranking = [
         {posicao:1, nome:"Fulano", grp_result:180, ko_result:60, classif:90, artilheiro:30, total:360},
